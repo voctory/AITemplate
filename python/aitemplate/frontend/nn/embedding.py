@@ -35,7 +35,7 @@ class Embedding(Module):
         return self.weight.tensor()
 
 
-USE_CUDA = detect_target().name() == "cuda"
+USE_CUDA = True
 
 
 class BertEmbeddings(Module):
