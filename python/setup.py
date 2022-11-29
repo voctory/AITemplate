@@ -55,9 +55,9 @@ class BinaryDistribution(Distribution):
 
 
 # temp copy 3rdparty libs to build dir
-shutil.copytree("../3rdparty", "./aitemplate/3rdparty")
-shutil.copytree("../static", "./aitemplate/static")
-shutil.copytree("../licenses", "./aitemplate/licenses")
+shutil.copytree("./AITemplate/3rdparty", "./aitemplate/3rdparty")
+shutil.copytree("./AITemplate/static", "./aitemplate/static")
+shutil.copytree("./AITemplate/licenses", "./aitemplate/licenses")
 
 
 def gen_file_list(srcs, f_cond):
