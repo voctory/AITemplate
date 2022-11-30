@@ -127,6 +127,12 @@ def gen_utils_file_list():
     return gen_file_list(srcs, f_cond)
 
 
+def gen_compiler_list():
+    srcs = ["aitemplate/compiler"]
+    f_cond = lambda x: True if x.endswith(".py") else False
+    return gen_file_list(srcs, f_cond)
+
+
 def gen_backend_common_file_list():
     srcs = ["aitemplate/backend/common"]
     f_cond = lambda x: True if x.endswith(".py") or x.endswith(".cuh") else False
@@ -171,7 +177,8 @@ setup(
         + gen_flash_attention_list()
         + gen_static_list()
         + gen_backend_common_file_list()
-        + gen_license_file_list(),
+        + gen_license_file_list()
+        + gen_compiler_list(),
     },
     python_requires=">=3.7, <4",
     distclass=BinaryDistribution,
